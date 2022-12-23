@@ -1,5 +1,6 @@
 # 16-12-2022
-TASK 6kyu
+#### Task 1
+### TASK 6kyu
 You have been hired by a company making electric garage doors. Accidents with the present product line have resulted in numerous damaged cars, broken limbs and several killed pets. Your mission is to write a safer version of their controller software.
 
 Specification
@@ -23,7 +24,8 @@ A string where each character represents one second and indicates the position o
 
 Example
 ..P...O..... as input should yield 001234321000 as output
-MY SOLUTION
+#### MY SOLUTION
+```Java
 public class Door {
     public static String run(String events) {
     
@@ -46,7 +48,9 @@ public class Door {
         return out.toString();
     }
 }
-FAV SOLUTION
+```
+### FAV SOLUTION
+```Java
 public class Door {
 
   public static String run(String events) {
@@ -63,9 +67,9 @@ public class Door {
     
     return s;
   }
-}
+}```
 
-TASK 2 6 kyu
+### TASK 2 6 kyu
 DESCRIPTION:
 Your friend won't stop texting his girlfriend. It's all he does. All day. Seriously. The texts are so mushy too! The whole situation just makes you feel ill. Being the wonderful friend that you are, you hatch an evil plot. While he's sleeping, you take his phone and change the autocorrect options so that every time he types "you" or "u" it gets changed to "your sister."
 
@@ -80,17 +84,20 @@ For the purposes of this kata, here's what you need to support:
 "youuuuu" with any number of u characters tacked onto the end
 "u" at the beginning, middle, or end of a string, but NOT part of a word
 "you" but NOT as part of another word like youtube or bayou
-SOLUTION 
+### MY SOLUTION 
+```Java
 public class Kata {
   public static String autocorrect(String input) {
     return input.replaceAll("\\b(?i:(you+)|u)\\b","your sister");
   }
 }
-FAV SOLUTION
-
+```
+### FAV SOLUTION
+```Java
 public class Kata {
   public static String autocorrect(String input) {
     return input.replaceAll("(?i)\\b(u|you+)\\b", "your sister");
   }
 }
 It s literally the same but marked as best practice
+```
