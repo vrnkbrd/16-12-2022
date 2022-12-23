@@ -67,7 +67,8 @@ public class Door {
     
     return s;
   }
-}```
+}
+```
 
 ### TASK 2 6 kyu
 DESCRIPTION:
